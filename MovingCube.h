@@ -19,6 +19,11 @@ public:
 	// Sets default values for this pawn's properties
 	AMovingCube();
 
+
+
+    UPROPERTY(EditAnywhere,  Category = "TOOT Property")
+    USceneComponent *TOOTVisibleComponent;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -38,6 +43,11 @@ private:
     void startJump();
     void stopJump();
     void moveAct(const FInputActionValue &val);
+
+
+    FVector currVelocity;
+    bool bGrowing;
+
 
 };
 
